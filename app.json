@@ -1,18 +1,32 @@
 {
   "pages":[
     "pages/bing/bing",
+    "pages/poetry/poetry",
     "pages/quotation/quotation",
     "pages/index/index",
     "pages/logs/logs"
   ],
     "tabBar": {
+      "color": "#707070",
+      "selectedColor": "#1296db",
+
       "list": [{
           "pagePath": "pages/bing/bing",
-          "text": "bing"
+          "iconPath": "pages/bing/a.png",
+          "selectedIconPath": "pages/bing/b.png",
+          "text":"bing"
         },
         {
           "pagePath": "pages/quotation/quotation",
+          "iconPath": "pages/quotation/a.png",
+          "selectedIconPath": "pages/quotation/b.png",
           "text": "quotation"
+        },
+        {
+          "pagePath": "pages/poetry/poetry",
+          "iconPath": "pages/poetry/a.png",
+          "selectedIconPath": "pages/poetry/b.png",
+          "text": "poetry"
         }
       ]
     },
@@ -20,6 +34,10 @@
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "dark",
+    "onReachBottomDistance": 100,
+    "navigationBarTitleText": "仙宝"
   }
 }

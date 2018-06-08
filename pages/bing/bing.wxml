@@ -1,8 +1,8 @@
-<view wx:for="{{list}}" wx:key="pic">
-<image src="{{item.pic}}" ></image>
-<text class='title'>{{m.sliceTitle(item.title)}}</text>
-<text class='content'>{{item.content}}</text>
-</view>
+<block wx:for="{{list}}" wx:key="pic">
+  <image src="{{item.pic}}" data-src="{{item.pic}}" bindtap="tapPic" ></image>
+  <text class='title' selectable="{{true}}">{{m.sliceTitle(item.title)}}</text>
+  <text class='content' selectable="{{true}}">{{item.content}}</text>
+</block>
 
 <wxs module="m">
 function sliceTitle(str){

@@ -1,0 +1,11 @@
+.view1{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+}
+
+.text{
+  display: block;
+  margin-bottom: 2em;
+}

@@ -1,0 +1,12 @@
+<text class='text' selectable="{{true}}"  wx:for="{{contentlist}}" wx:key="ct">{{m.sliceTitle(item.text)}}</text>
+
+<view class="view1">
+<slider class="slider" bindchange="sliderChange" value="{{currentPage}}" show-value step="1" min="1" max="{{allPages}}" />
+</view>
+
+<wxs module="m">
+function sliceTitle(str){
+  return str.replace(getRegExp('<br />\r\n', 'gm'), '')
+}
+module.exports.sliceTitle = sliceTitle;
+</wxs>

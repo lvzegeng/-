@@ -1,11 +1,13 @@
-// pages/quotation/quotation.js
+// pages/poetry/poetry.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    list: [],
+    currentPage: 0,
+    allPages: 0,
+    contentlist: [],
   },
 
   /**
@@ -47,14 +49,14 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    this.fetch();
+    this.fetch(this.data.currentPage, true);
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    this.fetch();
+    this.fetch(this.data.currentPage+1);
   },
 
   /**
@@ -64,20 +66,32 @@ Page({
   
   },
 
-  fetch: function(){
+  fetch: function (page, reset) {
     const _this = this;
-    wx.showLoading({title:'loading'});
+    wx.showLoading({ title: 'loading' });
     wx.request({
-      url: 'https://route.showapi.com/1211-1?showapi_appid=51856&showapi_sign=3d9c0bd00fb84342b61dc8aaafa131c3&count=10',
+      url: `https://route.showapi.com/341-1?page=${page||1}&maxResult=10&showapi_appid=51856&showapi_sign=3d9c0bd00fb84342b61dc8aaafa131c3`,
       success: function (res) {
         _this.setData({
-          list: [..._this.data.list, ...res.data.showapi_res_body.data],
+          contentlist: [...(reset? []: _this.data.contentlist), ...res.data.showapi_res_body.contentlist],
+          currentPage: res.data.showapi_res_body.currentPage,
+          allPages: res.data.showapi_res_body.allPages,
         })
+        if(reset){
+          wx.pageScrollTo({
+            scrollTop: 0,
+            duration: 300
+          })
+        }
       },
       complete: function () {
         wx.stopPullDownRefresh();
         wx.hideLoading();
       }
     })
+  },
+
+  sliderChange: function(e){
+    this.fetch(e.detail.value, true);
   }
 })

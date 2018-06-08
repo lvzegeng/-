@@ -1,14 +1,9 @@
 .english{
   display: block;
-  margin-bottom: 20rpx;
+  margin-bottom: 0.5em;
 }
 
 .chinese{
   display: block;
-  margin-bottom: 50rpx;
-
-}
-
-.button{
-  margin: 0 20rpx 50rpx 20rpx ;
+  margin-bottom: 2em;
 }
