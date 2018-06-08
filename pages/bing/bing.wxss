@@ -1,0 +1,12 @@
+.title{
+  text-align: center;
+  font-size: 50rpx;
+  line-height: 80rpx;
+  margin: 20rpx 0;
+  display: block
+}
+.content{
+  text-indent: 70rpx;
+  margin-bottom: 80rpx;
+  display: block
+}

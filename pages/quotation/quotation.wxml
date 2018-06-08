@@ -1,0 +1,6 @@
+<view wx:for="{{list}}" wx:key="english">
+<text class='english'>{{item.english}}</text>
+<text class='chinese'>{{item.chinese}}</text>
+</view>
+
+<button type="default" disabled="{{disabled}}" bindtap="fetch" class="button"> 换一批 </button>

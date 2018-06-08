@@ -1,0 +1,13 @@
+<view wx:for="{{list}}" wx:key="pic">
+<image src="{{item.pic}}" ></image>
+<text class='title'>{{m.sliceTitle(item.title)}}</text>
+<text class='content'>{{item.content}}</text>
+</view>
+
+<wxs module="m">
+function sliceTitle(str){
+  var index=str.indexOf('(')
+  return str.slice(0, index);
+}
+module.exports.sliceTitle = sliceTitle;
+</wxs>

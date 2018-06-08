@@ -1,0 +1,25 @@
+{
+  "pages":[
+    "pages/bing/bing",
+    "pages/quotation/quotation",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+    "tabBar": {
+      "list": [{
+          "pagePath": "pages/bing/bing",
+          "text": "bing"
+        },
+        {
+          "pagePath": "pages/quotation/quotation",
+          "text": "quotation"
+        }
+      ]
+    },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}
