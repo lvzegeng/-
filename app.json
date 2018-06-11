@@ -2,9 +2,7 @@
   "pages":[
     "pages/bing/bing",
     "pages/poetry/poetry",
-    "pages/quotation/quotation",
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/quotation/quotation"
   ],
     "tabBar": {
       "color": "#707070",
@@ -31,9 +29,7 @@
       ]
     },
   "window":{
-    "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black",
     "enablePullDownRefresh": true,
     "backgroundTextStyle": "dark",
