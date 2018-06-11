@@ -68,7 +68,7 @@ Page({
 
   fetch: function (page, reset) {
     const _this = this;
-    wx.showLoading({ title: 'loading' });
+    wx.showNavigationBarLoading();
     wx.request({
       url: `https://route.showapi.com/341-1?page=${page||1}&maxResult=10&showapi_appid=51856&showapi_sign=3d9c0bd00fb84342b61dc8aaafa131c3`,
       success: function (res) {
@@ -86,7 +86,7 @@ Page({
       },
       complete: function () {
         wx.stopPullDownRefresh();
-        wx.hideLoading();
+        wx.hideNavigationBarLoading();
       }
     })
   },

@@ -66,7 +66,7 @@ Page({
 
   fetch: function(){
     const _this = this;
-    wx.showLoading({title:'loading'});
+    wx.showNavigationBarLoading();
     wx.request({
       url: 'https://route.showapi.com/1211-1?showapi_appid=51856&showapi_sign=3d9c0bd00fb84342b61dc8aaafa131c3&count=10',
       success: function (res) {
@@ -76,7 +76,7 @@ Page({
       },
       complete: function () {
         wx.stopPullDownRefresh();
-        wx.hideLoading();
+        wx.hideNavigationBarLoading();
       }
     })
   }
